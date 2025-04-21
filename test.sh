@@ -3,24 +3,28 @@
 echo "Running tests..."
 echo
 
-./person < test/input.txt > test/actual_output.txt
+# Run the compiled program with input.txt and capture the output
+./animal < test/input.txt > test/actual_output.txt
 
-# Strip all whitespace and match only final output
-filtered=$(grep -E "Name:|Age:|Country:" test/actual_output.txt | tr -d '[:space:]')
-expected=$(tr -d '[:space:]' < test/expected_output.txt)
-
+# Check if the program exited successfully
 if [ $? -eq 0 ]; then
-  echo "✅ Program exited successfully"
+    echo "✅ Program exited successfully"
 else
-  echo "❌ Program did not exit cleanly"
-  exit 1
+    echo "❌ Program did not exit cleanly"
+    exit 1
 fi
 
-if [[ "$filtered" == "$expected" ]]; then
-  echo "✅ Test passed"
+# Normalize the output to ignore whitespace differences
+filtered_output=$(tr -d '[:space:]' < test/actual_output.txt)
+expected_output=$(tr -d '[:space:]' < test/expected_output.txt)
+
+# Compare outputs
+if [[ "$filtered_output" == "$expected_output" ]]; then
+    echo "✅ Test passed"
 else
-  echo "❌ Test failed"
-  echo "Expected: $expected"
-  echo "Got     : $filtered"
-  exit 1
+    echo "❌ Test failed"
+    echo "Expected: $expected_output"
+    echo "Got     : $filtered_output"
+    exit 1
 fi
+
