@@ -1,7 +1,5 @@
-
-Alice Smith
--5
-abc
-30
-
-Canada
+4
+3
+5
+4
+0
