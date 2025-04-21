@@ -1,4 +1,45 @@
---- Person Details ---
-Name: Alice Smith
-Age: 30
-Country: Canada
+Select an Animal:
+1. Dog
+2. Cat
+3. Horse
+4. Bird
+5. Fish
+6. Hamster
+0. Quit
+Enter your choice:
+Bird Menu:
+1. Eat
+2. Sleep
+3. Sound
+4. Display Info
+Enter your choice:
+I can chirp! Tweet tweet!!
+
+Select an Animal:
+1. Dog
+2. Cat
+3. Horse
+4. Bird
+5. Fish
+6. Hamster
+0. Quit
+Enter your choice:
+Fish Menu:
+1. Eat
+2. Sleep
+3. Sound
+4. Display Info
+Enter your choice:
+I am a Fish
+My color is Blue
+
+Select an Animal:
+1. Dog
+2. Cat
+3. Horse
+4. Bird
+5. Fish
+6. Hamster
+0. Quit
+Enter your choice:
+Exiting program. Goodbye!
