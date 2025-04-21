@@ -1,16 +1,16 @@
 # Compiler
-CC = g++
-TARGET = person
+# Makefile
 
-all: $(TARGET)
+all: animal
 
-$(TARGET): person.cpp
-	$(CC) person.cpp -o $(TARGET)
+animal: animal.cpp
+	g++ -o animal animal.cpp
+
+test: animal
+	bash test.sh
 
 clean:
-	rm -f $(TARGET)
+	rm -f animal
 
-test: $(TARGET)
-	bash test.sh
 
 
